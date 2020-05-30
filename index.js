@@ -53,7 +53,7 @@ function updateHistory() {
  */
 function buildCurrentWeatherQuery() {
   // queryURL is the url we'll use to query the API
-  var queryURL = "http://api.openweathermap.org/data/2.5/weather?";
+  var queryURL = "https://api.openweathermap.org/data/2.5/weather?";
 
   // Begin building an object to contain our API call's query parameters
   // Set the API key
@@ -86,7 +86,7 @@ function updateCurrentWeather(data) {
   var year = dateObj.getUTCFullYear();
   $name.append(data.name + "(" + month + "/" + day + "/" + year + ")");
   $icon = $("<img>");
-  $icon.attr('src', "http://openweathermap.org/img/wn/" + data.weather[0].icon + ".png");
+  $icon.attr('src', "https://openweathermap.org/img/wn/" + data.weather[0].icon + ".png");
   $name.append($icon);
 
   var $temp = $("<p>");
@@ -133,7 +133,7 @@ function updateUVIndex(data) {
 
 function buildForecastQuery(coord) {
   // queryURL is the url we'll use to query the API
-  var queryURL = "http://api.openweathermap.org/data/2.5/onecall?";
+  var queryURL = "https://api.openweathermap.org/data/2.5/onecall?";
 
   // Begin building an object to contain our API call's query parameters
   // Set the API key
@@ -166,7 +166,7 @@ function updateForecast(data) {
     $date.append(month + "/" + day + "/" + year);
   
     $icon = $("<img>");
-    $icon.attr('src', "http://openweathermap.org/img/wn/" + dayData.weather[0].icon + ".png");
+    $icon.attr('src', "https://openweathermap.org/img/wn/" + dayData.weather[0].icon + ".png");
 
     var $temp = $("<p>");
     $temp.append("Temp: " + dayData.temp.day + " °F");
