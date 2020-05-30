@@ -108,7 +108,7 @@ function updateCurrentWeather(data) {
 
 function buildUVIndexQuery(coord) {
   // queryURL is the url we'll use to query the API
-  var queryURL = "http://api.openweathermap.org/data/2.5/uvi?";
+  var queryURL = "https://api.openweathermap.org/data/2.5/uvi?";
 
   var queryParams = { "appid": "9302ba6e4398083aafb456d5410b963b" };
 
